@@ -31,12 +31,12 @@ def get_category_sales_summary(products):
         if g[1] not in categories:
             categories.append(g[1])
     category_sum = []        
-    for good_name in categories:
+    for cat_name in categories:
         total_unit=0
         for product in products:
-            if product[1]==good_name:
+            if product[1]==cat_name:
                 total_unit+=product[3]
-        category_sum.append((good_name, total_unit))
+        category_sum.append((cat_name, total_unit))
     category_sum.sort()
     return category_sum
 
